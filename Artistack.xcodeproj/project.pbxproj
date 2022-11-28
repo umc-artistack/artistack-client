@@ -360,6 +360,7 @@
 		10D4D4DF291121EB00E95C0D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				29F9DAB02934E2AB00C6EB22 /* MyProfile.storyboard */,
 				B48BB51328A566B6005ECD30 /* Media.storyboard */,
 				5CC24D0828B7537A00A0311C /* Home.storyboard */,
 				29AA3ACF288E972C002D38FE /* CollectionReusableView.xib */,
@@ -413,7 +414,6 @@
 		5C800CA0287A5F8900F393D6 = {
 			isa = PBXGroup;
 			children = (
-				29F9DAB02934E2AB00C6EB22 /* MyProfile.storyboard */,
 				5C800CAB287A5F8900F393D6 /* Artistack */,
 				5C800CAA287A5F8900F393D6 /* Products */,
 				20CC42F2414C0B73FE25E89C /* Pods */,

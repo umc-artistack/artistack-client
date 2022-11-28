@@ -12,7 +12,7 @@
         <scene sceneID="2X1-VO-QiZ">
             <objects>
                 <navigationController storyboardIdentifier="UINavigationController-igU-7Z-pPS" automaticallyAdjustsScrollViewInsets="NO" id="1ik-61-Vdf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="" image="tabBarItem:mj5-bf-dlc:image" id="mj5-bf-dlc"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="tabBarItem:mj5-bf-dlc:image" selectedImage="Profile" id="mj5-bf-dlc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ax-L2-aNa">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -30,7 +30,6 @@
         <!--Profile View Controller-->
         <scene sceneID="oeG-NY-SHf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ggB-du-6Te" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProfileVC" modalPresentationStyle="fullScreen" id="0zd-sk-2gW" customClass="ProfileViewController" customModule="Artistack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EQa-Yw-bsc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -82,11 +81,13 @@
                         <outlet property="profileCollectionView" destination="7Z7-Ge-q3a" id="7nY-zy-Gcw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggB-du-6Te" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3129" y="1360"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Profile" width="50" height="50"/>
         <image name="imageView:tkl-Pj-2cZ:image" width="292" height="125">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
