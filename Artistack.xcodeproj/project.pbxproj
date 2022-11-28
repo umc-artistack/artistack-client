@@ -36,9 +36,13 @@
 		29B6CF0D2888F75000E0843D /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B6CF0B2888F75000E0843D /* ProfileCollectionViewCell.swift */; };
 		29B6CF2B2889465E00E0843D /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B6CF292889465E00E0843D /* PostCollectionViewCell.swift */; };
 		29B6CF2C2889465E00E0843D /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B6CF2A2889465E00E0843D /* PostCollectionViewCell.xib */; };
+		29BF66982934D32000C41251 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BF66972934D32000C41251 /* Signin.storyboard */; };
+		29BF669A2934DB0000C41251 /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29BF66992934DAFF00C41251 /* ProfileEdit.storyboard */; };
 		29F2D44B28A533D80056EB0B /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 29F2D44A28A533D80056EB0B /* KakaoSDKAuth */; };
 		29F2D44D28A533D80056EB0B /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 29F2D44C28A533D80056EB0B /* KakaoSDKCommon */; };
 		29F2D44F28A533D80056EB0B /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 29F2D44E28A533D80056EB0B /* KakaoSDKUser */; };
+		29F9DAB22934E2AB00C6EB22 /* MyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F9DAB02934E2AB00C6EB22 /* MyProfile.storyboard */; };
+		29F9DAB42934E33E00C6EB22 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F9DAB32934E33E00C6EB22 /* Setting.storyboard */; };
 		29FED2B828B0EBE2005B0546 /* KaKaoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FED2AF28B0EBE2005B0546 /* KaKaoDataManager.swift */; };
 		29FED2B928B0EBE2005B0546 /* KakaoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FED2B028B0EBE2005B0546 /* KakaoModel.swift */; };
 		29FED2BB28B0EBE2005B0546 /* IdDuplicateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FED2B328B0EBE2005B0546 /* IdDuplicateModel.swift */; };
@@ -142,6 +146,10 @@
 		29B6CF0B2888F75000E0843D /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		29B6CF292889465E00E0843D /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		29B6CF2A2889465E00E0843D /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		29BF66972934D32000C41251 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
+		29BF66992934DAFF00C41251 /* ProfileEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
+		29F9DAB12934E2AB00C6EB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Artistack/Base.lproj/MyProfile.storyboard; sourceTree = "<group>"; };
+		29F9DAB32934E33E00C6EB22 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		29FED2AF28B0EBE2005B0546 /* KaKaoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaKaoDataManager.swift; sourceTree = "<group>"; };
 		29FED2B028B0EBE2005B0546 /* KakaoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakaoModel.swift; sourceTree = "<group>"; };
 		29FED2B328B0EBE2005B0546 /* IdDuplicateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdDuplicateModel.swift; sourceTree = "<group>"; };
@@ -362,6 +370,9 @@
 				5CC24D0928B7537A00A0311C /* HomeTableViewCell.xib */,
 				5CC24D0328B7537800A0311C /* LikeTableViewCell.xib */,
 				103B186B29332390001C16CB /* StackerCollectionViewCell.xib */,
+				29BF66972934D32000C41251 /* Signin.storyboard */,
+				29BF66992934DAFF00C41251 /* ProfileEdit.storyboard */,
+				29F9DAB32934E33E00C6EB22 /* Setting.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -402,6 +413,7 @@
 		5C800CA0287A5F8900F393D6 = {
 			isa = PBXGroup;
 			children = (
+				29F9DAB02934E2AB00C6EB22 /* MyProfile.storyboard */,
 				5C800CAB287A5F8900F393D6 /* Artistack */,
 				5C800CAA287A5F8900F393D6 /* Products */,
 				20CC42F2414C0B73FE25E89C /* Pods */,
@@ -534,6 +546,7 @@
 				5CC24D1728B7537D00A0311C /* HomeTableViewCell.xib in Resources */,
 				299155D3288579DC001FAED2 /* Pretendard-ExtraLight.otf in Resources */,
 				5CC24D1A28B7537D00A0311C /* BeforeStackTableViewCell.xib in Resources */,
+				29F9DAB22934E2AB00C6EB22 /* MyProfile.storyboard in Resources */,
 				299155D5288579DC001FAED2 /* Pretendard-Bold.otf in Resources */,
 				299155D0288579DC001FAED2 /* Pretendard-SemiBold.otf in Resources */,
 				5CC24D1128B7537D00A0311C /* LikeTableViewCell.xib in Resources */,
@@ -546,13 +559,16 @@
 				103B186C29332390001C16CB /* StackerCollectionViewCell.xib in Resources */,
 				5CC24D1628B7537D00A0311C /* Home.storyboard in Resources */,
 				5C800CB4287A5F8900F393D6 /* Main.storyboard in Resources */,
+				29BF66982934D32000C41251 /* Signin.storyboard in Resources */,
 				299155CF288579DC001FAED2 /* Pretendard-Regular.otf in Resources */,
 				299EE8422891969D009576B6 /* ProfileCollectionViewCell.xib in Resources */,
 				B48BB52828A566B6005ECD30 /* InstCollectionViewCell.xib in Resources */,
 				299155D4288579DC001FAED2 /* Pretendard-Medium.otf in Resources */,
+				29BF669A2934DB0000C41251 /* ProfileEdit.storyboard in Resources */,
 				299155D2288579DC001FAED2 /* Pretendard-Thin.otf in Resources */,
 				299155CD288579DC001FAED2 /* Pretendard-Black.otf in Resources */,
 				29B6CF2C2889465E00E0843D /* PostCollectionViewCell.xib in Resources */,
+				29F9DAB42934E33E00C6EB22 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +703,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		29F9DAB02934E2AB00C6EB22 /* MyProfile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29F9DAB12934E2AB00C6EB22 /* Base */,
+			);
+			name = MyProfile.storyboard;
+			sourceTree = "<group>";
+		};
 		5C800CB2287A5F8900F393D6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
