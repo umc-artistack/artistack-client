@@ -9,12 +9,16 @@ import UIKit
 import Alamofire
 import AVFAudio
 
+protocol ProfileReloadDelegate {
+    func executeMyProfileReload()
+}
+
 // 내프로필 -> 프로필편집화면 으로 프로필 정보 전달
 protocol ProfileCollectionViewCellDelegate {
     func profileEditButtonDidTap(index: Int, imgStr: String, img: UIImage, name: UILabel, bio: UILabel)
 }
 
-class ProfileViewController: UIViewController, UIGestureRecognizerDelegate {
+class ProfileViewController: UIViewController, UIGestureRecognizerDelegate, ProfileReloadDelegate {
     
     // MARK: - Properties
     var idArray =  [Int]()
@@ -123,6 +127,11 @@ class ProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     // MARK: - Actions
+    
+    func executeMyProfileReload() {
+        self.profileCollectionView.reloadData()
+    }
+    
     // 내프로필화면에서 선택한 게시글로 이동
     func collectionView(_ collectionView: UICollectionView,
       didSelectItemAt indexPath: IndexPath) {
@@ -463,7 +472,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
         print("tapped")
                   self.navigationController?.popViewController(animated: true)
 
-                    let myPostVC = self.storyboard?.instantiateViewController(withIdentifier: "SettingVC") as? SettingViewController
+                    let myPostVC = UIStoryboard(name: "Setting", bundle: nil).instantiateViewController(withIdentifier: "SettingVC") as? SettingViewController
                         // 뒤로가기 버튼 커스텀
                         let backBarButtonItem = UIBarButtonItem(title: "설정", style: .plain, target: self, action: nil)
                         backBarButtonItem.tintColor = .white
@@ -481,7 +490,9 @@ extension ProfileViewController: ProfileCollectionViewCellDelegate {
         backBarButtonItem.tintColor = .white
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
-        let profileEditViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileEditVC") as! ProfileEditViewController
+        let profileEditViewController = UIStoryboard(name: "ProfileEdit", bundle: nil).instantiateViewController(withIdentifier: "ProfileEditVC") as! ProfileEditViewController
+        
+        profileEditViewController.delegate = self
         
         // 기존 프로필사진, 닉네임, 소개글 정보 넘기기
         profileEditViewController.profileImgStr = imgStr
