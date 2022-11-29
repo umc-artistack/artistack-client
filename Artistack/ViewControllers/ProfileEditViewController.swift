@@ -127,7 +127,10 @@ class ProfileEditViewController: UIViewController , callProfilePhotoEditVC {
         else {
             print("이미지 수정 안 함")
             let params = ProfileEditInput(nickname: editedNickname, description: editedDescription)
-            self.saveProfile(params: params) {}        }
+            self.saveProfile(params: params) {
+                self.delegate?.executeMyProfileReload()
+            }
+        }
         
         
         
