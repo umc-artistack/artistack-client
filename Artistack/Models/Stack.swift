@@ -56,19 +56,19 @@ struct stProject: Codable {
     var stackCount: Int
     
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case videoUrl
-        case title
-        case description
-        case bpm
-        case codeFlow
-        case scope
-        case isStackable
-        case viewCount
-        case prevProjectId
-        case likeCount
-        case stackCount
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case id
+//        case videoUrl
+//        case title
+//        case description
+//        case bpm
+//        case codeFlow
+//        case scope
+//        case isStackable
+//        case viewCount
+//        case prevProjectId
+//        case likeCount
+//        case stackCount
+//    }
     
 }

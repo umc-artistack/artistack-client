@@ -23,6 +23,8 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var likeCountLbl: UILabel!
     @IBOutlet weak var stackBtn: UIButton!
     @IBOutlet weak var stackCountLbl: UILabel!
+    @IBOutlet weak var showMoreActionBtn: UIButton!
+    
     @IBOutlet weak var musicInfoView: UIView!
     var index: Int = 0
     var delegate: HomeTableViewCellDelegate?
@@ -210,7 +212,7 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     /*func contactServer(){
-        HomeDataManager().homeDataManager(projectId: 40, completion: {
+        HomeRepository().homeDataManager(projectId: 40, completion: {
             [weak self] res in
             //self?.
             self?.musicInfoCodeLbl.text = res.codeFlow
@@ -277,7 +279,7 @@ class HomeTableViewCell: UITableViewCell {
         } else {
             liked = false
             likeBtn.setImage(UIImage(named: "Like"), for: .normal)
-            HomeDataManager().postUnlikeManager(projectId: projectId)
+            HomeRepository().postUnlikeManager(projectId: projectId)
             var beforeLikeCnt = Int(likeCountLbl.text!)
             var newLikeCnt = beforeLikeCnt!-1
             likeCountLbl.text = String(newLikeCnt)
@@ -289,7 +291,7 @@ class HomeTableViewCell: UITableViewCell {
         if !liked {
             liked = true
             likeBtn.setImage(UIImage(named: "Like_fill"), for: .normal)
-            HomeDataManager().postLikeManager(projectId: projectId)
+            HomeRepository().postLikeManager(projectId: projectId)
             var beforeLikeCnt = Int(likeCountLbl.text!)
             var newLikeCnt = beforeLikeCnt!+1
             likeCountLbl.text = String(newLikeCnt)
@@ -307,16 +309,37 @@ class HomeTableViewCell: UITableViewCell {
     */
     
     @objc func tap() {
+        /*
+        print("tap() 시작")
+        likeBtn.rx.tap.asDriver()
+                    .throttle(.seconds(3))
+                    .drive(onNext: { (_) in
+                        print("tap() onNext")
+                        if !self.liked {
+                            self.likeVideo()
+                        } else {
+                            self.liked = false
+                            self.likeBtn.setImage(UIImage(named: "Like"), for: .normal)
+                            HomeRepository().postUnlikeManager(projectId: self.projectId)
+                            let newLikeCnt = Int(self.likeCountLbl.text!)!-1
+                            self.likeCountLbl.text = String(newLikeCnt)
+                                
+                        }
+                    })//.disposed(by: disposeBag)
+        
+        */
+        
         if !liked {
             likeVideo()
         } else {
             liked = false
             likeBtn.setImage(UIImage(named: "Like"), for: .normal)
-            HomeDataManager().postUnlikeManager(projectId: projectId)
-            var beforeLikeCnt = Int(likeCountLbl.text!)
-            var newLikeCnt = beforeLikeCnt!-1
+            HomeRepository().postUnlikeManager(projectId: projectId)
+            let newLikeCnt = Int(likeCountLbl.text!)!-1
             likeCountLbl.text = String(newLikeCnt)
+                
         }
+         
     }
     
     @objc func long(_ recognizer: UILongPressGestureRecognizer) {
@@ -332,9 +355,8 @@ class HomeTableViewCell: UITableViewCell {
         if !liked {
             liked = true
             likeBtn.setImage(UIImage(named: "Like_fill"), for: .normal)
-            HomeDataManager().postLikeManager(projectId: projectId)
-            var beforeLikeCnt = Int(likeCountLbl.text!)
-            var newLikeCnt = beforeLikeCnt!+1
+            HomeRepository().postLikeManager(projectId: projectId)
+            let newLikeCnt = Int(likeCountLbl.text!)! + 1
             likeCountLbl.text = String(newLikeCnt)
             LikePopupViewController.likePeopleCnt += 1
         }
@@ -402,7 +424,7 @@ class HomeTableViewCell: UITableViewCell {
         if !infoCheck {
             infoCheck = true
             /*
-            HomeDataManager().homeDataManager(projectId: 40, completion: {
+             HomeRepository().homeDataManager(projectId: 40, completion: {
                 [weak self] res in
                 //self?.
                 self?.musicInfoCodeLbl.text = res.codeFlow
@@ -452,6 +474,10 @@ class HomeTableViewCell: UITableViewCell {
         //}
     }
     
+    @IBAction func selectedShowMoreActionBtn(_ sender: Any) {
+        
+        self.delegate?.showMoreButton()
+    }
     
     
     private func setTempProfileImage(){
@@ -580,12 +606,11 @@ class HomeTableViewCell: UITableViewCell {
     }
     */
     
-    @IBAction func MiddleButtonTapped(_ sender: Any) {
+    @IBAction func tappedMiddleButton(_ sender: Any) {
         if beforeStackCnt >= 3 {
-            self.delegate?.middleButtonTapped()
+            self.delegate?.tappedMiddleButton()
         }
     }
-    
     
     // 추후 손봐야. 닉네임만 필요함
     // post 만들었을 때 하기

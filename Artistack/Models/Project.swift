@@ -63,25 +63,25 @@ struct EachProject: Codable {
     var stackCount: Int
     var isLiked: Bool
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case videoUrl
-        case title
-        case description
-        case bpm
-        case codeFlow
-        case scope
-        case isStackable
-        case viewCount
-        case prevProjectId
-        case user
-        case instruments
-        case prevStackers
-        case prevStackCount
-        case likeCount
-        case stackCount
-        case isLiked
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case id
+//        case videoUrl
+//        case title
+//        case description
+//        case bpm
+//        case codeFlow
+//        case scope
+//        case isStackable
+//        case viewCount
+//        case prevProjectId
+//        case user
+//        case instruments
+//        case prevStackers
+//        case prevStackCount
+//        case likeCount
+//        case stackCount
+//        case isLiked
+//    }
 }
 
 struct StackerInfo: Codable {
@@ -99,14 +99,14 @@ struct Pageable: Codable {
     var unpaged: Bool
     
     
-    enum CodingKeys: String, CodingKey {
-        case sort
-        case offset
-        case pageNumber
-        case pageSize
-        case unpaged
-        case paged
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case sort
+//        case offset
+//        case pageNumber
+//        case pageSize
+//        case unpaged
+//        case paged
+//    }
 }
 
 struct SortedCheck: Codable {
@@ -114,9 +114,9 @@ struct SortedCheck: Codable {
     var sorted: Bool
     var unsorted: Bool
     
-    enum CodingKeys: String, CodingKey {
-        case empty
-        case sorted
-        case unsorted
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case empty
+//        case sorted
+//        case unsorted
+//    }
 }

@@ -56,6 +56,15 @@
 		29FED2CB28B0EDB9005B0546 /* ProfileEditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FED2CA28B0EDB9005B0546 /* ProfileEditModel.swift */; };
 		29FED2CE28B0EE8B005B0546 /* ImageUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FED2CD28B0EE8B005B0546 /* ImageUploadManager.swift */; };
 		29FED2D028B0EE99005B0546 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FED2CF28B0EE99005B0546 /* ImageModel.swift */; };
+		5C286144293F283D004F2B08 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C286143293F283C004F2B08 /* HomeViewModel.swift */; };
+		5C28614C293F2F9B004F2B08 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C286149293F2F9B004F2B08 /* Like.swift */; };
+		5C28614D293F2F9B004F2B08 /* LikedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28614B293F2F9B004F2B08 /* LikedList.swift */; };
+		5C28614E293F2F9B004F2B08 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28614A293F2F9B004F2B08 /* Stack.swift */; };
+		5C28614F293F2F9B004F2B08 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C286147293F2F9B004F2B08 /* Project.swift */; };
+		5C286150293F2F9B004F2B08 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C286146293F2F9B004F2B08 /* Instrument.swift */; };
+		5C286151293F2F9B004F2B08 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C286148293F2F9B004F2B08 /* Post.swift */; };
+		5C286152293F2F9B004F2B08 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C286145293F2F9B004F2B08 /* User.swift */; };
+		5C286159293F8717004F2B08 /* ShowMoreBtnPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C286158293F8717004F2B08 /* ShowMoreBtnPopupViewController.swift */; };
 		5C690F3628A7E8B300B347FC /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C690F3528A7E8B300B347FC /* URL+Extension.swift */; };
 		5C690F4528A7E97300B347FC /* VideoPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C690F4028A7E97200B347FC /* VideoPlayerManager.swift */; };
 		5C690F4628A7E97300B347FC /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C690F4128A7E97200B347FC /* VideoPlayerView.swift */; };
@@ -68,14 +77,7 @@
 		5C9DCDE728850C62009252FF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9DCDE628850C62009252FF /* ProfileViewController.swift */; };
 		5CC24CBC28B5C41500A0311C /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CBB28B5C41500A0311C /* UIImageView+Extension.swift */; };
 		5CC24CF228B7531500A0311C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CF128B7531500A0311C /* HomeViewController.swift */; };
-		5CC24CFA28B7533C00A0311C /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CF328B7533A00A0311C /* Like.swift */; };
-		5CC24CFB28B7533C00A0311C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CF428B7533A00A0311C /* Post.swift */; };
-		5CC24CFC28B7533C00A0311C /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CF528B7533B00A0311C /* Stack.swift */; };
-		5CC24CFD28B7533C00A0311C /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CF628B7533B00A0311C /* Project.swift */; };
-		5CC24CFE28B7533C00A0311C /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CF728B7533B00A0311C /* Instrument.swift */; };
-		5CC24CFF28B7533C00A0311C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CF828B7533C00A0311C /* User.swift */; };
-		5CC24D0028B7533C00A0311C /* LikedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24CF928B7533C00A0311C /* LikedList.swift */; };
-		5CC24D0228B7536200A0311C /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24D0128B7536200A0311C /* HomeDataManager.swift */; };
+		5CC24D0228B7536200A0311C /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24D0128B7536200A0311C /* HomeRepository.swift */; };
 		5CC24D1128B7537D00A0311C /* LikeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC24D0328B7537800A0311C /* LikeTableViewCell.xib */; };
 		5CC24D1228B7537D00A0311C /* StackerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24D0428B7537800A0311C /* StackerCollectionViewCell.swift */; };
 		5CC24D1328B7537D00A0311C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC24D0528B7537900A0311C /* HomeTableViewCell.swift */; };
@@ -163,6 +165,15 @@
 		29FED2CA28B0EDB9005B0546 /* ProfileEditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditModel.swift; sourceTree = "<group>"; };
 		29FED2CD28B0EE8B005B0546 /* ImageUploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadManager.swift; sourceTree = "<group>"; };
 		29FED2CF28B0EE99005B0546 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		5C286143293F283C004F2B08 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = "../../../Artistack-new/Artistack/Models/HomeViewModel.swift"; sourceTree = "<group>"; };
+		5C286145293F2F9B004F2B08 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5C286146293F2F9B004F2B08 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		5C286147293F2F9B004F2B08 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		5C286148293F2F9B004F2B08 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5C286149293F2F9B004F2B08 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		5C28614A293F2F9B004F2B08 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		5C28614B293F2F9B004F2B08 /* LikedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedList.swift; sourceTree = "<group>"; };
+		5C286158293F8717004F2B08 /* ShowMoreBtnPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreBtnPopupViewController.swift; sourceTree = "<group>"; };
 		5C690F3528A7E8B300B347FC /* URL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		5C690F4028A7E97200B347FC /* VideoPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerManager.swift; sourceTree = "<group>"; };
 		5C690F4128A7E97200B347FC /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -177,14 +188,7 @@
 		5C9DCDE628850C62009252FF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5CC24CBB28B5C41500A0311C /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		5CC24CF128B7531500A0311C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5CC24CF328B7533A00A0311C /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
-		5CC24CF428B7533A00A0311C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		5CC24CF528B7533B00A0311C /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		5CC24CF628B7533B00A0311C /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		5CC24CF728B7533B00A0311C /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
-		5CC24CF828B7533C00A0311C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5CC24CF928B7533C00A0311C /* LikedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedList.swift; sourceTree = "<group>"; };
-		5CC24D0128B7536200A0311C /* HomeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
+		5CC24D0128B7536200A0311C /* HomeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		5CC24D0328B7537800A0311C /* LikeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LikeTableViewCell.xib; sourceTree = "<group>"; };
 		5CC24D0428B7537800A0311C /* StackerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackerCollectionViewCell.swift; sourceTree = "<group>"; };
 		5CC24D0528B7537900A0311C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -247,7 +251,7 @@
 				B48BB50A28A566B6005ECD30 /* PostingDataManager.swift */,
 				29FED2AF28B0EBE2005B0546 /* KaKaoDataManager.swift */,
 				B42C5E6228AE7EC2005C5628 /* MyprojectDataManager.swift */,
-				5CC24D0128B7536200A0311C /* HomeDataManager.swift */,
+				5CC24D0128B7536200A0311C /* HomeRepository.swift */,
 				B4AD983228B416B6008B8153 /* GetProjectDataManager.swift */,
 				29FED2CD28B0EE8B005B0546 /* ImageUploadManager.swift */,
 				29FED2C828B0EDAE005B0546 /* ProfileEditDataManager.swift */,
@@ -296,6 +300,7 @@
 				2997536528A0A67800280D10 /* ProfilePhotoSetViewController.swift */,
 				29369592289E66460042B541 /* SecondSignUpViewController.swift */,
 				2936958B289BB1C80042B541 /* SignInViewController.swift */,
+				5C286158293F8717004F2B08 /* ShowMoreBtnPopupViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 		10D4D4DB29111FD000E95C0D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5C286143293F283C004F2B08 /* HomeViewModel.swift */,
 				29FED2B028B0EBE2005B0546 /* KakaoModel.swift */,
 				29FED2B328B0EBE2005B0546 /* IdDuplicateModel.swift */,
 				29FED2B728B0EBE2005B0546 /* UserModel.swift */,
@@ -318,13 +324,13 @@
 				B4AD982C28B41676008B8153 /* GetProjectModel.swift */,
 				B48BB50828A566B6005ECD30 /* PostingInput.swift */,
 				B48BB50928A566B6005ECD30 /* PostingModel.swift */,
-				5CC24CF728B7533B00A0311C /* Instrument.swift */,
-				5CC24CF328B7533A00A0311C /* Like.swift */,
-				5CC24CF928B7533C00A0311C /* LikedList.swift */,
-				5CC24CF428B7533A00A0311C /* Post.swift */,
-				5CC24CF628B7533B00A0311C /* Project.swift */,
-				5CC24CF528B7533B00A0311C /* Stack.swift */,
-				5CC24CF828B7533C00A0311C /* User.swift */,
+				5C286146293F2F9B004F2B08 /* Instrument.swift */,
+				5C286149293F2F9B004F2B08 /* Like.swift */,
+				5C28614B293F2F9B004F2B08 /* LikedList.swift */,
+				5C286148293F2F9B004F2B08 /* Post.swift */,
+				5C286147293F2F9B004F2B08 /* Project.swift */,
+				5C28614A293F2F9B004F2B08 /* Stack.swift */,
+				5C286145293F2F9B004F2B08 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -625,17 +631,17 @@
 				2997536628A0A67800280D10 /* ProfilePhotoSetViewController.swift in Sources */,
 				B48BB53328A567AA005ECD30 /* UIKit+Extension.swift in Sources */,
 				29FED2C928B0EDAE005B0546 /* ProfileEditDataManager.swift in Sources */,
+				5C28614C293F2F9B004F2B08 /* Like.swift in Sources */,
 				2936958C289BB1C80042B541 /* SignInViewController.swift in Sources */,
 				B42C5E6128AE7EB2005C5628 /* MyprojectModel.swift in Sources */,
 				5CC24D1328B7537D00A0311C /* HomeTableViewCell.swift in Sources */,
 				5C690F4728A7E97300B347FC /* VideoCacheManager.swift in Sources */,
-				5CC24CFA28B7533C00A0311C /* Like.swift in Sources */,
 				103B186F2933296F001C16CB /* UIColor+Extension.swift in Sources */,
+				5C286150293F2F9B004F2B08 /* Instrument.swift in Sources */,
 				B4AD982D28B41676008B8153 /* GetProjectModel.swift in Sources */,
 				2936959928A013630042B541 /* FinishSignUpViewController.swift in Sources */,
 				5C690F4528A7E97300B347FC /* VideoPlayerManager.swift in Sources */,
-				5CC24CFC28B7533C00A0311C /* Stack.swift in Sources */,
-				5CC24CFF28B7533C00A0311C /* User.swift in Sources */,
+				5C28614F293F2F9B004F2B08 /* Project.swift in Sources */,
 				B4AD983328B416B6008B8153 /* GetProjectDataManager.swift in Sources */,
 				29369591289E663C0042B541 /* FirstSignUpViewController.swift in Sources */,
 				103B187129332CEA001C16CB /* Consts.swift in Sources */,
@@ -644,6 +650,7 @@
 				29FED2C728B0ED9E005B0546 /* ProfileEditInput.swift in Sources */,
 				5CC24D1228B7537D00A0311C /* StackerCollectionViewCell.swift in Sources */,
 				29FED2B828B0EBE2005B0546 /* KaKaoDataManager.swift in Sources */,
+				5C286144293F283D004F2B08 /* HomeViewModel.swift in Sources */,
 				29FED2BD28B0EBE2005B0546 /* UserDataManager.swift in Sources */,
 				5C9DCDE728850C62009252FF /* ProfileViewController.swift in Sources */,
 				B46EE84528B094ED00DB2935 /* MyAuthenticator.swift in Sources */,
@@ -651,22 +658,21 @@
 				29FED2BC28B0EBE2005B0546 /* UserInput.swift in Sources */,
 				B48BB52028A566B6005ECD30 /* MediaPostingViewController.swift in Sources */,
 				5CC24D1E28B7537D00A0311C /* StackBtnPopupViewController.swift in Sources */,
-				5CC24D0028B7533C00A0311C /* LikedList.swift in Sources */,
 				B48BB53228A567AA005ECD30 /* UIview+Extension.swift in Sources */,
 				29AA3AD0288E972C002D38FE /* CollectionReusableView.swift in Sources */,
 				B42C5E6328AE7EC2005C5628 /* MyprojectDataManager.swift in Sources */,
 				B420D6D328AF6151009D05CA /* ReissueModel.swift in Sources */,
+				5C286151293F2F9B004F2B08 /* Post.swift in Sources */,
 				29FED2BE28B0EBE2005B0546 /* UserModel.swift in Sources */,
 				29FED2C128B0ED1F005B0546 /* MyprojectDeleteDataModel.swift in Sources */,
 				29369595289E66590042B541 /* ThirdSignUpViewController.swift in Sources */,
 				29FED2C428B0ED72005B0546 /* ProfileModel.swift in Sources */,
 				B48BB51D28A566B6005ECD30 /* PostingModel.swift in Sources */,
 				5CC24CF228B7531500A0311C /* HomeViewController.swift in Sources */,
-				5CC24D0228B7536200A0311C /* HomeDataManager.swift in Sources */,
+				5CC24D0228B7536200A0311C /* HomeRepository.swift in Sources */,
 				B46EE85828B1CC4B00DB2935 /* LaunchScreenViewController.swift in Sources */,
 				29369593289E66460042B541 /* SecondSignUpViewController.swift in Sources */,
 				B48BB52328A566B6005ECD30 /* RecordingViewController.swift in Sources */,
-				5CC24CFE28B7533C00A0311C /* Instrument.swift in Sources */,
 				5CC24D1B28B7537D00A0311C /* OneProjectViewController.swift in Sources */,
 				5C800CAF287A5F8900F393D6 /* SceneDelegate.swift in Sources */,
 				B48BB52728A566B6005ECD30 /* MediaPlayerCustomView.swift in Sources */,
@@ -679,24 +685,26 @@
 				5CC24D1928B7537D00A0311C /* LikeTableViewCell.swift in Sources */,
 				B48BB51B28A566B6005ECD30 /* VolumeViewController.swift in Sources */,
 				5CC24CBC28B5C41500A0311C /* UIImageView+Extension.swift in Sources */,
-				5CC24CFD28B7533C00A0311C /* Project.swift in Sources */,
 				B48BB51C28A566B6005ECD30 /* PostingInput.swift in Sources */,
 				29AA3AD5288E9D17002D38FE /* CustomCollectionViewFlowLayout.swift in Sources */,
 				29FED2D028B0EE99005B0546 /* ImageModel.swift in Sources */,
 				29FED2BB28B0EBE2005B0546 /* IdDuplicateModel.swift in Sources */,
 				5C690F3628A7E8B300B347FC /* URL+Extension.swift in Sources */,
+				5C28614E293F2F9B004F2B08 /* Stack.swift in Sources */,
 				B46B80DE28B4F93C00645D9C /* PleaseViewController.swift in Sources */,
 				29FED2CB28B0EDB9005B0546 /* ProfileEditModel.swift in Sources */,
-				5CC24CFB28B7533C00A0311C /* Post.swift in Sources */,
 				29369597289E66620042B541 /* FinalSignUpViewController.swift in Sources */,
+				5C28614D293F2F9B004F2B08 /* LikedList.swift in Sources */,
 				B48BB52528A566B6005ECD30 /* InstCollectionViewCell.swift in Sources */,
 				29B6CF2B2889465E00E0843D /* PostCollectionViewCell.swift in Sources */,
 				5CC24D1D28B7537D00A0311C /* BeforeStackTableViewCell.swift in Sources */,
 				B46EE84928B095A200DB2935 /* MyAuthenticationCredential.swift in Sources */,
+				5C286159293F8717004F2B08 /* ShowMoreBtnPopupViewController.swift in Sources */,
 				5CC24D1428B7537D00A0311C /* BeforeStackViewController.swift in Sources */,
 				29FED2CE28B0EE8B005B0546 /* ImageUploadManager.swift in Sources */,
 				5C690F4628A7E97300B347FC /* VideoPlayerView.swift in Sources */,
 				29FED2B928B0EBE2005B0546 /* KakaoModel.swift in Sources */,
+				5C286152293F2F9B004F2B08 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

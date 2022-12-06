@@ -1,20 +1,20 @@
 PODS:
-  - Alamofire (5.6.1)
+  - Alamofire (5.6.4)
   - JJFloatingActionButton (2.5.0)
-  - KakaoSDKAuth (2.11.1):
-    - KakaoSDKCommon (= 2.11.1)
-  - KakaoSDKCommon (2.11.1):
-    - KakaoSDKCommon/Common (= 2.11.1)
-    - KakaoSDKCommon/Network (= 2.11.1)
-  - KakaoSDKCommon/Common (2.11.1)
-  - KakaoSDKCommon/Network (2.11.1):
+  - KakaoSDKAuth (2.12.0):
+    - KakaoSDKCommon (= 2.12.0)
+  - KakaoSDKCommon (2.12.0):
+    - KakaoSDKCommon/Common (= 2.12.0)
+    - KakaoSDKCommon/Network (= 2.12.0)
+  - KakaoSDKCommon/Common (2.12.0)
+  - KakaoSDKCommon/Network (2.12.0):
     - Alamofire (~> 5.1)
-    - KakaoSDKCommon/Common (= 2.11.1)
-  - KakaoSDKUser (2.11.1):
-    - KakaoSDKAuth (= 2.11.1)
+    - KakaoSDKCommon/Common (= 2.12.0)
+  - KakaoSDKUser (2.12.0):
+    - KakaoSDKAuth (= 2.12.0)
   - KeychainAccess (4.2.2)
-  - Kingfisher (7.3.0)
-  - lottie-ios (3.4.0)
+  - Kingfisher (7.4.1)
+  - lottie-ios (3.5.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -55,14 +55,14 @@ SPEC REPOS:
     - Then
 
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
-  KakaoSDKAuth: bb2dfa7be30daa8403c9cfc8001aa6fde7a5b779
-  KakaoSDKCommon: 555e1bb46595b842ded01cf7888cc17bbae4e113
-  KakaoSDKUser: 08c0a4f40bebdebdf948a9e3d0e44ed5c2754f99
+  KakaoSDKAuth: 46e9979113a2f1b6ce7b347465841c78f6e43b03
+  KakaoSDKCommon: 7a49d3c686a7b38b4736ab4b8e0f776feed15bcd
+  KakaoSDKUser: addc31c3b9b5be71b231021467dbaef3086efbb2
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
-  Kingfisher: cdb1189a9223b1bc028816bd47c8b8101a58831c
-  lottie-ios: 69495122151a378fdc7d1bb4c5930347e37baf1f
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8

@@ -35,9 +35,9 @@ struct Person: Codable {
     var nickname: String
     var profileImgUrl: String?
     
-    enum CodingKeys: String, CodingKey {
-        case artistackId
-        case nickname
-        case profileImgUrl
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case artistackId
+//        case nickname
+//        case profileImgUrl
+//    }
 }

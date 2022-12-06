@@ -10,17 +10,24 @@ import UIKit
 class LikePopupViewController: UIViewController {
 
     @IBOutlet weak var likeTableView: UITableView!
-    @IBOutlet weak var PopupDismissButton: UIButton!
+    @IBOutlet weak var popupDismissButton: UIButton!
     @IBOutlet weak var emptyLikePeopleView: UIView!
+    @IBOutlet weak var likePeopleCntDisplay: UILabel!
+    
     static var likePeopleCnt: Int = Int()
     static var likePeopleList: [Person?] = []
     static var projectId: Int = Int()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fillLikePeopleTable()
+        // 이전에 남은 것이 출력되는 List
         print("[LikePopupViewController] likePeopleList : ", LikePopupViewController.likePeopleList)
+        // Count는 잘 출력됨
         print("[LikePopupViewController] likePeopleCnt : ", LikePopupViewController.likePeopleCnt)
+        likePeopleCntDisplay.text = String(LikePopupViewController.likePeopleCnt)
+        
         if LikePopupViewController.likePeopleCnt > 0 {
             emptyLikePeopleView.isHidden = true
             likeTableView.isHidden = false
@@ -33,7 +40,7 @@ class LikePopupViewController: UIViewController {
     
     
     func fillLikePeopleTable(){
-        HomeDataManager().likedPeopleListManager(projectId: LikePopupViewController.projectId, completion: {
+        HomeRepository().likedPeopleListManager(projectId: LikePopupViewController.projectId, completion: {
             [weak self]res in
             LikePopupViewController.likePeopleList = res
             self?.likeTableView.reloadData()
@@ -43,6 +50,7 @@ class LikePopupViewController: UIViewController {
     
     
     func setupLikeTableView(){
+        // 이전에 남아있던 것이 출력되는
         print("[setupLikeTableView] likePeopleList : ", LikePopupViewController.likePeopleList)
         likeTableView.layer.backgroundColor = UIColor.clear.cgColor
         likeTableView.backgroundColor = .clear
@@ -53,7 +61,7 @@ class LikePopupViewController: UIViewController {
         likeTableView.dataSource = self
     }
  
-    @IBAction func PopupDismissButtonTapped(_ sender: Any) {
+    @IBAction func popupDismissButtonTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
     

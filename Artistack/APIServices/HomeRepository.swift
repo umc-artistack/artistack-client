@@ -1,5 +1,5 @@
 //
-//  HomeDataManager.swift
+//  HomeRepository.swift
 //  Practice_Artistack
 //
 //  Created by csh on 2022/08/09.
@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class HomeDataManager {
+class HomeRepository {
     
     let baseUrl = "https://dev.artistack.shop/"
 

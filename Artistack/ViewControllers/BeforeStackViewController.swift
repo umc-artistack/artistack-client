@@ -35,7 +35,7 @@ class BeforeStackViewController: UIViewController {
     */
     
     func callBeforeStack(){
-        HomeDataManager().stackInfoManager(projectId: BeforeStackViewController.projectId, sequence: "prev", query: "true", completion: {
+        HomeRepository().stackInfoManager(projectId: BeforeStackViewController.projectId, sequence: "prev", query: "true", completion: {
             [weak self] res in
             print("stackInfoManager 결과 한 번 보자 : ", res)
             BeforeStackViewController.beforeStackTable = res
@@ -54,7 +54,7 @@ class BeforeStackViewController: UIViewController {
         //setupTableSize()
         
         /*
-        HomeDataManager().stackInfoManager(projectId: projectId, sequence: "prev", completion: {
+         HomeRepository().stackInfoManager(projectId: projectId, sequence: "prev", completion: {
             [weak self] res in
             self?.beforeStackTable = res
             self?.stackTableView.reloadData()

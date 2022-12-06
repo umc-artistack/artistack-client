@@ -31,7 +31,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuE-KY-b8t" userLabel="Stack Label">
-                        <rect key="frame" x="329" y="778" width="35" height="21"/>
+                        <rect key="frame" x="329" y="747" width="35" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="Tof-Yt-bE7"/>
                             <constraint firstAttribute="height" constant="21" id="tcn-WA-zDt"/>
@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN1-qQ-iNX" userLabel="Stack Btn">
-                        <rect key="frame" x="322" y="731" width="50" height="50"/>
+                        <rect key="frame" x="322" y="700" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="e70-Ai-9l3"/>
                             <constraint firstAttribute="width" constant="50" id="h1R-uJ-3mC"/>
@@ -53,7 +53,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFm-dh-Imi" userLabel="Like Label">
-                        <rect key="frame" x="329" y="705" width="35" height="21"/>
+                        <rect key="frame" x="329" y="674" width="35" height="21"/>
                         <accessibility key="accessibilityConfiguration" identifier="HomeTableVC"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="SI6-4D-jVN"/>
@@ -64,19 +64,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsM-JP-PbG" userLabel="Like Btn">
-                        <rect key="frame" x="322" y="661" width="50" height="50"/>
+                        <rect key="frame" x="322" y="630" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="ODj-eY-e8l"/>
                             <constraint firstAttribute="width" constant="50" id="VGX-Ri-Hys"/>
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="Like"/>
-                        <connections>
-                            <action selector="like:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e0K-SQ-qh8"/>
-                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sli-Qr-fpt" userLabel="SongInfo Btn">
-                        <rect key="frame" x="322.33333333333331" y="605" width="50" height="50"/>
+                        <rect key="frame" x="322.33333333333331" y="574" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Y5t-9m-4yR"/>
                             <constraint firstAttribute="height" constant="50" id="iV3-dk-Hzs"/>
@@ -389,19 +386,33 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly3-gL-yBw" userLabel="Show More Btn">
+                        <rect key="frame" x="322" y="768" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Wsw-wR-ezR"/>
+                            <constraint firstAttribute="width" constant="50" id="qKt-4b-WT6"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ShowMore"/>
+                        <connections>
+                            <action selector="selectedShowMoreActionBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4mI-R1-s94"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="TxE-JW-sYc"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="TxE-JW-sYc" firstAttribute="trailing" secondItem="Ly3-gL-yBw" secondAttribute="trailing" constant="18" id="1kf-br-x7E"/>
                     <constraint firstItem="237-hK-9TK" firstAttribute="top" secondItem="Zat-3W-KZE" secondAttribute="bottom" constant="2" id="2Yb-lX-bmJ"/>
                     <constraint firstItem="Xqm-ZE-QMA" firstAttribute="top" secondItem="tT5-xf-VSp" secondAttribute="bottom" constant="2" id="4eg-Tv-AQ6"/>
-                    <constraint firstAttribute="bottom" secondItem="cuE-KY-b8t" secondAttribute="bottom" constant="44" id="4kk-rI-nwb"/>
+                    <constraint firstAttribute="bottom" secondItem="cuE-KY-b8t" secondAttribute="bottom" constant="75" id="4kk-rI-nwb"/>
                     <constraint firstItem="Zat-3W-KZE" firstAttribute="top" secondItem="oPy-dm-gfR" secondAttribute="bottom" constant="2" id="524-29-28B"/>
                     <constraint firstItem="pFS-Fd-C24" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6Nn-hg-AWf"/>
                     <constraint firstItem="TxE-JW-sYc" firstAttribute="trailing" secondItem="sli-Qr-fpt" secondAttribute="trailing" constant="17.670000000000002" id="7l8-Oc-ESj"/>
                     <constraint firstAttribute="bottom" secondItem="pFS-Fd-C24" secondAttribute="bottom" multiplier="1.9" constant="20" symbolic="YES" id="80R-hs-I8v"/>
                     <constraint firstItem="oPy-dm-gfR" firstAttribute="leading" secondItem="RwT-kj-a09" secondAttribute="leading" id="8Z4-XZ-sRk"/>
                     <constraint firstItem="JN1-qQ-iNX" firstAttribute="top" secondItem="MFm-dh-Imi" secondAttribute="bottom" constant="5" id="9jV-eT-vOK"/>
+                    <constraint firstItem="TxE-JW-sYc" firstAttribute="bottom" secondItem="Ly3-gL-yBw" secondAttribute="bottom" constant="25" id="KY4-Mc-BCh"/>
                     <constraint firstItem="RwT-kj-a09" firstAttribute="top" secondItem="Xqm-ZE-QMA" secondAttribute="bottom" constant="20" id="MwH-nx-me9"/>
                     <constraint firstItem="JN1-qQ-iNX" firstAttribute="top" secondItem="GsM-JP-PbG" secondAttribute="bottom" constant="20" id="P0a-9g-rPN"/>
                     <constraint firstItem="Zat-3W-KZE" firstAttribute="centerX" secondItem="Net-mH-eSc" secondAttribute="centerX" id="QPS-Mq-ExJ"/>
@@ -417,7 +428,7 @@
                     <constraint firstItem="TxE-JW-sYc" firstAttribute="trailing" secondItem="GsM-JP-PbG" secondAttribute="trailing" constant="18" id="kLJ-hX-n2D"/>
                     <constraint firstItem="TxE-JW-sYc" firstAttribute="bottom" secondItem="RwT-kj-a09" secondAttribute="bottom" constant="41" id="n0g-Wt-sH5"/>
                     <constraint firstItem="fTJ-Zo-lge" firstAttribute="leading" secondItem="TxE-JW-sYc" secondAttribute="leading" constant="20" id="oUm-YV-Uqz"/>
-                    <constraint firstAttribute="bottom" secondItem="JN1-qQ-iNX" secondAttribute="bottom" constant="62" id="ok9-FF-h5j"/>
+                    <constraint firstAttribute="bottom" secondItem="JN1-qQ-iNX" secondAttribute="bottom" constant="93" id="ok9-FF-h5j"/>
                     <constraint firstItem="GsM-JP-PbG" firstAttribute="top" secondItem="sli-Qr-fpt" secondAttribute="bottom" constant="6" id="pbh-pN-sdp"/>
                     <constraint firstItem="tT5-xf-VSp" firstAttribute="top" secondItem="237-hK-9TK" secondAttribute="bottom" constant="2" id="q17-dL-8Ld"/>
                     <constraint firstItem="tT5-xf-VSp" firstAttribute="centerX" secondItem="r3U-V0-03E" secondAttribute="centerX" id="tV7-cO-Y5A"/>
@@ -457,6 +468,7 @@
                 <outlet property="musicInfoCodeLbl" destination="1Qm-Sj-95T" id="iZL-i2-4qH"/>
                 <outlet property="musicInfoView" destination="pFS-Fd-C24" id="cKl-FL-he5"/>
                 <outlet property="showMore" destination="Cnt-7k-tHY" id="9VH-av-dvp"/>
+                <outlet property="showMoreActionBtn" destination="Ly3-gL-yBw" id="i0K-VL-3yY"/>
                 <outlet property="songInfoBtn" destination="sli-Qr-fpt" id="vax-OV-MDV"/>
                 <outlet property="stackBtn" destination="JN1-qQ-iNX" id="8q8-ea-jQi"/>
                 <outlet property="stackCountLbl" destination="cuE-KY-b8t" id="Yww-Uh-yNp"/>
@@ -470,6 +482,7 @@
         <image name="Line" width="2" height="8"/>
         <image name="Piano" width="30" height="30"/>
         <image name="ProfileBackground" width="48.333332061767578" height="48.333332061767578"/>
+        <image name="ShowMore" width="50.333332061767578" height="50"/>
         <image name="SongInfo" width="50.333332061767578" height="50"/>
         <image name="Stack" width="50" height="50"/>
         <image name="사람1" width="42.5" height="51"/>

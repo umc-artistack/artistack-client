@@ -12,10 +12,12 @@ struct Instrument: Codable {
     var name: String
     var imgUrl: String?
     
+    /*
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case imgUrl
     }
+    */
 }
 

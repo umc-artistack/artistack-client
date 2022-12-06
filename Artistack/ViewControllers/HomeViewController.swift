@@ -16,8 +16,9 @@ import Kingfisher
 // 프로토콜
 protocol HomeTableViewCellDelegate {
     func longPressedlikeButton()
-    func middleButtonTapped()
+    func tappedMiddleButton()
     func showStackerButton()
+    func showMoreButton()
 }
 
 class HomeViewController: UIViewController {
@@ -33,6 +34,7 @@ class HomeViewController: UIViewController {
     var tmpUrl: String = String()
     
     let refreshControl = UIRefreshControl()
+    let viewModel = HomeViewModel()
     let disposeBag = DisposeBag()
     //let stackPopupControllerView = stackPopupControllerView
     // var data = [Post]() // 추후 Post에 쓰여진 data들을 기반으로 HomeView에서 출력 예정
@@ -59,7 +61,7 @@ class HomeViewController: UIViewController {
         print("새로고침!")
         
         DispatchQueue.main.asyncAfter(deadline: .now()){
-            HomeDataManager().homeDataAllManager(completion: {
+            HomeRepository().homeDataAllManager(completion: {
                 [weak self]res in
                 self?.projectItems = res
                 self?.mainTableView.reloadData()
@@ -90,7 +92,7 @@ class HomeViewController: UIViewController {
     
     
     func callAllProjects() {
-        HomeDataManager().homeDataAllManager(completion: {
+        HomeRepository().homeDataAllManager(completion: {
             [weak self]res in
             self?.projectItems = res
             self?.mainTableView.reloadData()
@@ -157,7 +159,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, UITabl
             
             
             DispatchQueue.main.async {
-                HomeDataManager().homeDataManager(projectId: 40, completion: {
+             HomeRepository().homeDataManager(projectId: 40, completion: {
                     
                     [weak self] res in
                     //let target = URL(string: res.videoUrl)
@@ -179,7 +181,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, UITabl
                 do {
                     //print("tmp가 가질 값 : ", projectItems[indexPath.row]!)
                     var tmp = 40//projectItems[indexPath.row]!.id
-                    let data = try await HomeDataManager().homeDataInfoManager(projectId: tmp)
+                    let data = try await HomeRepository().homeDataInfoManager(projectId: tmp)
                     print("cell에 필요한 정보 받아온 결과 : ", data)
                     cell.musicInfoCodeLbl.text = data.codeFlow
                     cell.musicInfoBpmLbl.text = data.bpm
@@ -317,7 +319,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, UITabl
             
             // 하나의 프로젝트 (= 하나의 셀) 정보 조회 API를 통한 정보 대입
             /*
-            HomeDataManager().homeDataInfoManager(projectId: self.projectItems[indexPath.row]!.id, completion: {//self.projectItems[indexPath.row]?.id ?? 0, completion: {
+             HomeRepository().homeDataInfoManager(projectId: self.projectItems[indexPath.row]!.id, completion: {//self.projectItems[indexPath.row]?.id ?? 0, completion: {
                 [weak self] res in
                 //if res.description?.count == 0 {
                 //    print("res.description 길이 : ", res.description?.count)
@@ -400,7 +402,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, UITabl
     
     /*
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            HomeDataManager().stackInfoManager(projectId: self.projectItems[indexPath.row]!.id, sequence: "prev", completion: {
+     HomeRepository().stackInfoManager(projectId: self.projectItems[indexPath.row]!.id, sequence: "prev", completion: {
                 [weak self] res in
                 print("stackInfoManager 결과 한 번 보자 : ", res)
                 BeforeStackViewController.beforeStackTable = res
@@ -443,11 +445,11 @@ extension HomeViewController: HomeTableViewCellDelegate {
     func longPressedlikeButton() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "likePopupVC")
-        vc.modalPresentationStyle = .overCurrentContext 
+        vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
     }
     
-    func middleButtonTapped() {
+    func tappedMiddleButton() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "BeforeStackVC")
         vc.modalPresentationStyle = .overCurrentContext
@@ -458,6 +460,13 @@ extension HomeViewController: HomeTableViewCellDelegate {
     func showStackerButton() {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "StackBtnPopupVC")
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: false, completion: nil)
+    }
+    
+    func showMoreButton() {
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ShowMoreVC")
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: false, completion: nil)
     }

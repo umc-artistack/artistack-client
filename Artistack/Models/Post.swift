@@ -32,22 +32,22 @@ struct PostInfo: Codable {
     var likeCount: Int
     var stackCount: Int
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case videoUrl
-        case title
-        case description
-        case isStackable
-        case scope
-        case codeFlow
-        case bpm
-        case viewCount
-        case prevProjectId
-        case user
-        case instruments
-        case likeCount
-        case stackCount
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case id
+//        case videoUrl
+//        case title
+//        case description
+//        case isStackable
+//        case scope
+//        case codeFlow
+//        case bpm
+//        case viewCount
+//        case prevProjectId
+//        case user
+//        case instruments
+//        case likeCount
+//        case stackCount
+//    }
 }
 
 

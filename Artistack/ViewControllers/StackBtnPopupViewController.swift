@@ -55,7 +55,7 @@ class StackBtnPopupViewController: UIViewController {
     }
 
     func fillCollectionTable(){
-        HomeDataManager().stackInfoManager(projectId: StackBtnPopupViewController.projectId, sequence: "next", query: "false", completion:{
+        HomeRepository().stackInfoManager(projectId: StackBtnPopupViewController.projectId, sequence: "next", query: "false", completion:{
             [weak self] res in
             print("stackInfoManager [next]의 출력 결과 : ", res)
             self?.collectionTable = res
@@ -113,7 +113,7 @@ extension StackBtnPopupViewController : UICollectionViewDelegate, UICollectionVi
         cell.stackerImageView.setImage(with: (collectionTable[indexPath.row]?.profileImgUrl ?? nil))
         
         /*
-        HomeDataManager().stackInfoManager(projectId: 40, sequence: "next", completion: {
+         HomeRepository().stackInfoManager(projectId: 40, sequence: "next", completion: {
             [weak self] res in
             //for row in res {
             print("res[indexPath.item] : ", res[indexPath.item])
