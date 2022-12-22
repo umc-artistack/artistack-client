@@ -2,7 +2,9 @@
 
 
 # 🎹 ARTISTACK
-**뮤지션들의 음악 협업 플랫폼** <br/>
+**뮤지션들의 음악 협업 플랫폼** 
+<img src="https://img.shields.io/badge/iOS15.0+-000000?style=flat-square&logo=&logoColor=white"/>
+<img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/> <br/>
 
 
 ### BACKGROUND
