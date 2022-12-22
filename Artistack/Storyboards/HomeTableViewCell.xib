@@ -245,7 +245,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
                                         <connections>
-                                            <action selector="MiddleButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vi0-57-kmr"/>
+                                            <action selector="tappedMiddleButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oWn-TF-MRU"/>
                                         </connections>
                                     </button>
                                 </subviews>
